@@ -1,13 +1,181 @@
 body {
+  background: url(walpaper.jpg);
+  background-position:center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: gray;
   margin: 0;
+  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none; 
+  -moz-user-select: none;     
+  -ms-user-select: none;      
+  user-select: none;          
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.allItems {
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  text-align: center;
+  justify-content: center;
+}
+
+.item {
+  padding: 10px;
+  border-radius: 7px;
+  border:2px solid cyan;
+  box-sizing: border-box;
+  width: 280px;
+  margin: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 13px;
+  color: yellow;
+  font-weight: 500;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.info {
+  font-size: 14px;
+  color: white;
+  text-shadow: 1px 1px 2px cyan;
+}
+
+.item:hover {
+  border-color: gold;
+  cursor: default;
+  transition: 0.2s ease-in;
+}
+
+.author {
+  color:cyan;
+  font-size: 13px;
+}
+
+.readMore {
+  color: gold;
+  font-size: 14px;
+  text-decoration: none;
+  margin: 0 auto;
+  border-radius: 7px;
+  border-top: 1px solid gold;
+  border-bottom: 1px solid gold;
+  height: 20px;
+  line-height: 20px;
+  text-shadow: 1px 1px 1px black;
+  width: 220px;
+  display: block;
+  margin-top: 3px;
+}
+
+
+.img {
+  margin-top: 7px;
+  width: 220px;
+  height: 120px;
+  border-radius: 7px;
+  border:1px solid cyan
+}
+
+.loading {
+  font-size: 30px;
+  color:cyan;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  height: 100vh;
+  line-height: 100vh;
+}
+
+
+.header {
+  color:cyan;
+  font-size: 20px;
+  text-align: center;
+  max-width: 850px;
+  width: 90%;
+  text-shadow: 1px 1px 1px blue;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 10px auto;
+}
+
+.me {
+  color: cyan;
+  font-size: 20px;
+  margin: 5px auto 10px auto;
+  text-shadow: 1px 1px 1px black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+@media only screen and (max-width: 880px) {
+  .allItems {
+    grid-template-columns: auto auto;
+  }
+
+  .header {
+    max-width: 550px;
+  }
+
+  .item {
+    width: 300px;
+  }
+
+  .item:hover {
+    border-color: cyan;
+  }
+  
+}
+
+@media only screen and (max-width: 635px) {
+  .allItems {
+    grid-template-columns: auto;
+  }
+
+  .header {
+    max-width: 300px;
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 319px) {
+  .item {
+    width: 270px;
+  }
+  .header {
+    max-width: 270px;
+  }
+}
+
+@media only screen and (max-width: 279px) {
+  .item {
+    width: 250px;
+  }
+  .header {
+    max-width: 250px;
+  }
+
+  .me {
+    font-size: 18px;
+  }
 }
